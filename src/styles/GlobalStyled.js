@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { primaryColor, primaryDarkColor, linkColor } from '../config/colors';
 
 export default createGlobalStyle`
 * {
@@ -8,7 +9,8 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 body {
-  font-family: 'Times New Roman', Times, serif;
+  background-color: ${primaryDarkColor};
+  color: ${primaryDarkColor} ;
 }
 html, body, #root {
   height: 100%;
@@ -16,9 +18,16 @@ html, body, #root {
 }
 button {
   cursor: pointer;
+  background-color: ${primaryColor};
+  border: none;
+  color: #fff;
+  padding: 10px 20px ;
+  border-radius: 8px;
+
 }
 a{
   text-decoration: none;
+  color: ${primaryColor};
 }
 ul {
   list-style: none;
