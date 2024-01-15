@@ -10,7 +10,6 @@ export default function Login() {
       <Title>
         Login <small>Hello word</small>
       </Title>
-
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis
         reiciendis mollitia aut quidem quae omnis, necessitatibus maxime
