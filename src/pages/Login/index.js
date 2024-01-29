@@ -1,22 +1,29 @@
 import React from 'react';
-
+import { useDispatch } from 'react-redux';
 import { Container } from '../../styles/GlobalStyled';
-
-import { Title } from './styled';
-
+import { Form, Label } from './stlyed';
 export default function Login() {
+  const dispatch = useDispatch();
+  function handleClick(e) {
+    e.preventDefault();
+    dispatch({
+      type: 'BOTAO_CLICADO',
+    });
+  }
   return (
     <Container>
-      <Title>
-        Login <small>Hello word</small>
-      </Title>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis
-        reiciendis mollitia aut quidem quae omnis, necessitatibus maxime
-        possimus molestiae dolores, tempora, magni deleniti cumque maiores ipsam
-        facere. Tempore, expedita.
-      </p>
-      <button>Enviar</button>
+      <Form action="/" method="Post">
+        <Label>
+          <input type="email" name="email" placeholder="Email" />
+        </Label>
+        <br />
+        <Label>
+          <input type="password" name="password" placeholder="Password" />
+        </Label>
+        <button type="submit" onClick={handleClick}>
+          Enviar
+        </button>
+      </Form>
     </Container>
   );
 }
