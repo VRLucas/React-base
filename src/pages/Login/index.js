@@ -2,13 +2,13 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Container } from '../../styles/GlobalStyled';
 import { Form, Label } from './stlyed';
+
+import * as action from '../../store/modules/example/action';
 export default function Login() {
   const dispatch = useDispatch();
   function handleClick(e) {
     e.preventDefault();
-    dispatch({
-      type: 'BOTAO_CLICADO',
-    });
+    dispatch(action.cliacaBotao());
   }
   return (
     <Container>
@@ -20,7 +20,7 @@ export default function Login() {
         <Label>
           <input type="password" name="password" placeholder="Password" />
         </Label>
-        <button type="submit" onClick={handleClick}>
+        <button type="button" onClick={handleClick}>
           Enviar
         </button>
       </Form>
