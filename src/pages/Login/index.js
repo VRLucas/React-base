@@ -8,7 +8,7 @@ export default function Login() {
   const dispatch = useDispatch();
   function handleClick(e) {
     e.preventDefault();
-    dispatch(action.cliacaBotao());
+    dispatch(action.cliacaBotaoRequest());
   }
   return (
     <Container>
